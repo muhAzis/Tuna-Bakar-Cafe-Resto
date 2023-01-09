@@ -425,7 +425,7 @@ h2.reviewPelanggan {
   color: #044771;
 }
 
-.cardR1 {
+.cardR {
   display: flex;
   width: 45%;
   margin-top: 44px;
@@ -434,20 +434,12 @@ h2.reviewPelanggan {
   border-radius: 10px;
   transition: all 1s;
 }
-.cardR1:hover {
-  margin-left: 50px;
-}
-.cardR1 .col1 {
+.cardR .col1 {
   width: 52px;
-  height: 52px;
   margin-top: 20px;
   margin-left: 20px;
-  background-image: url('image/profile.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
-.cardR1 .col2 {
+.cardR .col2 {
   display: flex;
   flex-flow: column;
   width: 700px;
@@ -455,118 +447,25 @@ h2.reviewPelanggan {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.cardR1 .col2 h3 {
+.cardR .col2 h3 {
   margin: 0px;
   font-family: 'Caveat', cursive;
   font-size: 30px;
 }
-.cardR1 .col2 ul {
+.cardR .col2 ul {
   margin: -5px 0px 0px;
   padding: 0px;
   list-style-type: none;
 }
-.cardR1 .col2 ul li {
+.cardR .col2 ul li {
   float: left;
   margin-right: 2px;
 }
-.cardR1 .col2 p {
-  margin: 10px 0px 0px;
+.cardR .col2 p {
+  margin: 10px 20px 0px 0px;
 }
-
-.cardR2 {
-  display: flex;
-  width: 45%;
-  margin-top: 20px;
-  background: #ffffff;
-  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: all 1s;
-}
-.cardR2:hover {
+.cardR:hover {
   margin-left: 50px;
-}
-.cardR2 .col1 {
-  width: 52px;
-  height: 52px;
-  margin-top: 20px;
-  margin-left: 20px;
-  background-image: url('image/profile.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.cardR2 .col2 {
-  display: flex;
-  flex-flow: column;
-  width: 700px;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.cardR2 .col2 h3 {
-  margin: 0px;
-  font-family: 'Caveat', cursive;
-  font-size: 30px;
-}
-.cardR2 .col2 ul {
-  margin: -5px 0px 0px;
-  padding: 0px;
-  list-style-type: none;
-}
-.cardR2 .col2 ul li {
-  float: left;
-  margin-right: 2px;
-}
-.cardR2 .col2 p {
-  margin: 10px 0px 0px;
-}
-
-.cardR3 {
-  display: flex;
-  width: 45%;
-  margin-top: 20px;
-  background: #ffffff;
-  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: all 1s;
-}
-.cardR3:hover {
-  margin-left: 50px;
-}
-.cardR3 .col1 {
-  width: 52px;
-  height: 52px;
-  margin-top: 20px;
-  margin-left: 20px;
-  background-image: url('image/profile.png');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.cardR3 .col2 {
-  display: flex;
-  flex-flow: column;
-  width: 700px;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.cardR3 .col2 h3 {
-  margin: 0px;
-  font-family: 'Caveat', cursive;
-  font-size: 30px;
-}
-.cardR3 .col2 ul {
-  margin: -5px 0px 0px;
-  padding: 0px;
-  list-style-type: none;
-}
-.cardR3 .col2 ul li {
-  float: left;
-  margin-right: 2px;
-}
-.cardR3 .col2 p {
-  margin: 10px 0px 0px;
 }
 
 /*-------------------------------------------------------------------------*/
@@ -811,14 +710,12 @@ h2.info {
   }
 
   /* Reviews */
-  .cardR1,
-  .cardR2,
-  .cardR3 {
+  .cardR {
     width: 80%;
   }
   #reviews .col1 {
     width: 17%;
-    height: 48px;
+    height: fit-content;
     margin-left: 10px;
   }
   #reviews .col2 {
