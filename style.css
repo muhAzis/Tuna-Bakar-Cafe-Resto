@@ -1,0 +1,870 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body,
+h1,
+h2 {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 20px;
+}
+.container {
+  background-color: #f6f6f6;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*-------------------------------- Navigation Bar --------------------------------*/
+/*--------------------------------------------------------------------------------*/
+#navbar ul {
+  display: flex;
+  margin-left: auto;
+  margin-right: 62px;
+  list-style-type: none;
+  font-family: 'Caveat', cursive;
+}
+.menu li {
+  margin-right: 25px;
+  font-size: 18px;
+}
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.jdl2 {
+  margin-left: 5px;
+  font-family: 'Caveat', cursive;
+  font-size: 24px;
+}
+.jdl1 {
+  margin-left: 100px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#navbar {
+  position: sticky;
+  top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(7.5px);
+}
+
+button.buy {
+  width: 87px;
+  height: 28px;
+  margin-right: 100px;
+  border: none;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  font-family: 'Caveat', cursive;
+  font-size: 16px;
+  color: #fbd100;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  margin: 0 20px 0 auto;
+  flex-flow: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  left: -6px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* hamburger menu animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  /* transform: scale(0); */
+  opacity: 0;
+}
+
+/*---------------------------------------------------------------------------*/
+/*-------------------------------- Jumbotron --------------------------------*/
+/*---------------------------------------------------------------------------*/
+#jumbotron {
+  margin-top: -50px;
+  width: 100%;
+  background-image: url('image/bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filter {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  background: rgba(251, 209, 0, 0.07);
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+h1.line1 {
+  margin-top: 100px;
+  font-size: 80px;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+}
+h1.line2 {
+  font-family: 'Caveat', cursive;
+  font-size: 63px;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+img.logo {
+  width: 130px;
+  height: 130px;
+  margin-top: 17px;
+  margin-bottom: 100px;
+}
+
+/*--------------------------------------------------------------------------*/
+/*-------------------------------- about us --------------------------------*/
+/*--------------------------------------------------------------------------*/
+#about {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 700px;
+  text-align: center;
+  justify-content: center;
+  color: #044771;
+}
+
+h2.tentangKami {
+  font-family: 'Caveat', cursive;
+}
+
+#about p {
+  margin: 10px 10%;
+  font-size: 14px;
+}
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------------- product --------------------------------*/
+/*-------------------------------------------------------------------------*/
+#product {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.menus {
+  display: flex;
+  flex-flow: column;
+  width: 70%;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h2.menuKami {
+  margin-top: 20px;
+  font-family: 'Caveat', cursive;
+  color: #044771;
+}
+
+.cards input {
+  position: absolute;
+  width: 250px;
+  height: 225px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.cards h3 {
+  display: flex;
+  height: 20%;
+  margin: 10px auto;
+  font-family: 'Caveat', cursive;
+  color: #044771;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards p {
+  margin-bottom: -150px;
+  font-size: 14px;
+  color: #044771;
+  transition: all 1s;
+}
+
+.cards .crdLaut input:checked ~ p {
+  margin: 10px auto;
+}
+.cards .crdLaut input:checked ~ img {
+  height: 100px;
+}
+.cards .crdLaut input:checked {
+  height: 370px;
+}
+.cards .crdSunda input:checked ~ p {
+  margin: 10px auto;
+}
+.cards .crdSunda input:checked ~ img {
+  height: 100px;
+}
+.cards .crdSunda input:checked {
+  height: 370px;
+}
+.cards .crdPrasmanan input:checked ~ p {
+  margin: 10px auto;
+}
+.cards .crdPrasmanan input:checked ~ img {
+  height: 100px;
+}
+.cards .crdPrasmanan input:checked {
+  height: 370px;
+}
+.cards .crdKeluarga input:checked ~ p {
+  margin: 10px auto;
+}
+.cards .crdKeluarga input:checked ~ img {
+  height: 100px;
+}
+.cards .crdKeluarga input:checked {
+  height: 370px;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 70px;
+  margin-bottom: 120px;
+  justify-content: space-evenly;
+}
+
+.crdLaut,
+.crdSunda,
+.crdPrasmanan,
+.crdKeluarga {
+  display: flex;
+  flex-flow: column;
+  width: 250px;
+  /* height: 225px; */
+  height: fit-content;
+  padding-bottom: 10px;
+  margin-top: 15px;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.cards img {
+  height: 200px;
+  object-fit: cover;
+  transition: all 1s;
+}
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------------- gallery --------------------------------*/
+/*-------------------------------------------------------------------------*/
+#gallery {
+  display: flex;
+  flex-flow: column;
+  margin-top: 230px;
+  width: 100%;
+  /* background-color: #fbd100; */
+  align-items: center;
+  justify-content: center;
+  color: #044771;
+}
+
+#gallery .galeri {
+  display: flex;
+  flex-flow: column;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+h2.galeriKami {
+  font-family: 'Caveat', cursive;
+  margin-bottom: 50px;
+}
+
+.card {
+  width: 295px;
+  height: 225px;
+  margin: 10px;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  background-image: url('image/image_template.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#gallery .cards2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards2 .card1 {
+  background-image: url(image/gallery/1.png);
+  background-size: cover;
+  background-position: center;
+}
+.cards2 .card2 {
+  background-image: url(image/gallery/2.png);
+  background-size: cover;
+  background-position: center;
+}
+.cards2 .card3 {
+  background-image: url(image/gallery/3.png);
+  background-size: cover;
+  background-position: center;
+}
+.cards2 .card4 {
+  background-image: url(image/gallery/4.png);
+  background-size: cover;
+  background-position: center;
+}
+.cards2 .card5 {
+  background-image: url(image/gallery/5.png);
+  background-size: cover;
+  background-position: center;
+}
+.cards2 .card6 {
+  background-image: url(image/gallery/6.png);
+  background-size: cover;
+  background-position: center;
+}
+.cards2 .card7 {
+  background-image: url(image/gallery/7.png);
+  background-size: cover;
+  background-position: center;
+}
+.cards2 .card8 {
+  background-image: url(image/gallery/8.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------------- reviews --------------------------------*/
+/*-------------------------------------------------------------------------*/
+#reviews {
+  display: flex;
+  flex-flow: column;
+  margin-top: 230px;
+  width: 100%;
+  align-items: center;
+  color: #044771;
+}
+#reviews p {
+  font-size: 14px;
+}
+
+h2.reviewPelanggan {
+  font-family: 'Caveat', cursive;
+  color: #044771;
+}
+
+.cardR1 {
+  display: flex;
+  width: 45%;
+  margin-top: 44px;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: all 1s;
+}
+.cardR1:hover {
+  margin-left: 50px;
+}
+.cardR1 .col1 {
+  width: 52px;
+  height: 52px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-image: url('image/profile.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cardR1 .col2 {
+  display: flex;
+  flex-flow: column;
+  width: 700px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.cardR1 .col2 h3 {
+  margin: 0px;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+}
+.cardR1 .col2 ul {
+  margin: -5px 0px 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.cardR1 .col2 ul li {
+  float: left;
+  margin-right: 2px;
+}
+.cardR1 .col2 p {
+  margin: 10px 0px 0px;
+}
+
+.cardR2 {
+  display: flex;
+  width: 45%;
+  margin-top: 20px;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: all 1s;
+}
+.cardR2:hover {
+  margin-left: 50px;
+}
+.cardR2 .col1 {
+  width: 52px;
+  height: 52px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-image: url('image/profile.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cardR2 .col2 {
+  display: flex;
+  flex-flow: column;
+  width: 700px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.cardR2 .col2 h3 {
+  margin: 0px;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+}
+.cardR2 .col2 ul {
+  margin: -5px 0px 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.cardR2 .col2 ul li {
+  float: left;
+  margin-right: 2px;
+}
+.cardR2 .col2 p {
+  margin: 10px 0px 0px;
+}
+
+.cardR3 {
+  display: flex;
+  width: 45%;
+  margin-top: 20px;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: all 1s;
+}
+.cardR3:hover {
+  margin-left: 50px;
+}
+.cardR3 .col1 {
+  width: 52px;
+  height: 52px;
+  margin-top: 20px;
+  margin-left: 20px;
+  background-image: url('image/profile.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cardR3 .col2 {
+  display: flex;
+  flex-flow: column;
+  width: 700px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.cardR3 .col2 h3 {
+  margin: 0px;
+  font-family: 'Caveat', cursive;
+  font-size: 30px;
+}
+.cardR3 .col2 ul {
+  margin: -5px 0px 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.cardR3 .col2 ul li {
+  float: left;
+  margin-right: 2px;
+}
+.cardR3 .col2 p {
+  margin: 10px 0px 0px;
+}
+
+/*-------------------------------------------------------------------------*/
+/*-------------------------------- contact --------------------------------*/
+/*-------------------------------------------------------------------------*/
+#contact {
+  display: flex;
+  flex-flow: column;
+  margin-top: 230px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#contact p {
+  font-size: 14px;
+  color: #044771;
+}
+
+h2.hubungiKami {
+  font-family: 'Caveat', cursive;
+  color: #044771;
+}
+
+.form {
+  margin-top: 40px;
+  width: 30%;
+  padding: 0;
+  align-items: center;
+}
+
+input,
+textarea {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  padding: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #aaa;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: none;
+}
+textarea {
+  resize: vertical;
+}
+
+#nama,
+#email,
+#hp {
+  height: 35px;
+}
+
+#contact button {
+  width: 100px;
+  height: 28px;
+  font-family: 'Caveat', cursive;
+  font-size: 16px;
+  color: #ffffff;
+  background: #044771;
+  box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+p.atas {
+  text-align: start;
+  margin-bottom: 10px;
+}
+p.bawah {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*------------------------------------------------------------------------*/
+/*-------------------------------- footer --------------------------------*/
+/*------------------------------------------------------------------------*/
+#footer {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  margin-top: 230px;
+  color: #044771;
+  background: #ffffff;
+  box-shadow: 0px -4px 8px 1px rgba(0, 0, 0, 0.1);
+}
+
+#footer .row1 {
+  display: flex;
+  flex-flow: row;
+  margin: 0px;
+}
+#footer .row1 .col1 {
+  width: 100%;
+  margin-bottom: 60px;
+}
+h2.info {
+  margin-top: 20px;
+  margin-left: 100px;
+  font-family: 'Caveat', cursive;
+}
+.line {
+  width: 252.5px;
+  height: 2px;
+  margin-left: 100px;
+  background-color: #044771;
+  border-radius: 1px;
+}
+#footer .card3 {
+  margin: 16px 0px 0px 100px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+}
+#footer .card3 img {
+  padding: 0px;
+  margin-right: 12px;
+  width: 15px;
+  object-fit: contain;
+}
+#footer .card3 p {
+  font-size: 14px;
+  padding: 0px;
+  margin: 0px;
+}
+#footer .row1 .col2 {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+#footer .row1 .col2 h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
+  margin-right: 40px;
+  text-align: end;
+}
+#gmaps {
+  width: 400px;
+  height: 275px;
+  background: #d9d9d9;
+  box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.1);
+}
+
+#footer .row2 {
+  display: flex;
+  height: 40px;
+  margin: 0px;
+  color: #ffffff;
+  font-size: 12px;
+  background-color: #044771;
+  align-items: center;
+  justify-content: center;
+}
+#footer .row2 img {
+  width: 15px;
+  margin-right: 5px;
+  object-fit: contain;
+}
+
+/*----------------------------------------------------------------------------*/
+/*-------------------------------- RESPONSIVE --------------------------------*/
+/*----------------------------------------------------------------------------*/
+@media screen and (max-width: 576px) {
+  /* Navbar */
+  .jdl1 {
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .jdl2 {
+    font-size: 20px;
+  }
+
+  #navbar ul {
+    width: 120px;
+    flex-flow: column;
+    margin: 247px -160px 0 auto;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(7.5px);
+    align-items: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.5s;
+    overflow: hidden;
+  }
+  #navbar ul.slide {
+    height: fit-content;
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .menu li {
+    margin: 0 0;
+    transition: all 0.5s;
+  }
+  .menu.slide li {
+    margin: 5px 0;
+  }
+
+  button.buy {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Jumbotron */
+  h1.line1 {
+    font-size: 60px;
+  }
+
+  h1.line2 {
+    font-size: 53px;
+  }
+
+  img.logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Products */
+  .menus {
+    width: 90%;
+  }
+
+  .cards {
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  /* Reviews */
+  .cardR1,
+  .cardR2,
+  .cardR3 {
+    width: 80%;
+  }
+  #reviews .col1 {
+    width: 17%;
+    height: 48px;
+    margin-left: 10px;
+  }
+  #reviews .col2 {
+    width: 100%;
+    margin-left: 10px;
+  }
+  #reviews .col2 h3 {
+    font-size: 22px;
+  }
+
+  #reviews p {
+    font-size: 10px;
+    margin: 10px 10px 0px 0px;
+  }
+
+  /* Contact */
+  .form {
+    width: 90%;
+  }
+
+  /* Footer */
+  #footer .row1 {
+    margin-bottom: 20px;
+  }
+
+  #footer .row1 .col1 {
+    margin-bottom: 30px;
+  }
+
+  #footer .row1 {
+    flex-flow: column;
+  }
+
+  h2.info {
+    margin-left: 15px;
+  }
+
+  .line {
+    margin-left: 15px;
+  }
+
+  #footer .card3 {
+    margin-left: 15px;
+  }
+
+  #footer .row1 .col2 {
+    flex-flow: column;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  #footer .row1 .col2 h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+}
