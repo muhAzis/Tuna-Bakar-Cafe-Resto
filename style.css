@@ -69,7 +69,7 @@ h3 {
 button.buy {
   width: 87px;
   height: 28px;
-  margin-right: 100px;
+  margin-left: 100px;
   border: none;
   background: #ffffff;
   box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.25);
@@ -745,9 +745,12 @@ h2.info {
   }
 
   #navbar ul {
+    position: absolute;
     width: 120px;
     flex-flow: column;
-    margin: 247px -160px 0 auto;
+    margin-right: 0;
+    top: 50px;
+    right: 0;
     background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(7.5px);
     align-items: center;
@@ -755,11 +758,15 @@ h2.info {
     opacity: 0;
     transition: all 0.5s;
     overflow: hidden;
+    z-index: -1;
   }
   #navbar ul.slide {
     height: fit-content;
     transform: translateY(0);
     opacity: 1;
+  }
+  #navbar ul.slide button.buy {
+    margin: 20px 0;
   }
 
   .menu li {
@@ -771,7 +778,8 @@ h2.info {
   }
 
   button.buy {
-    display: none;
+    margin: 0;
+    transition: all 0.5s;
   }
 
   .menu-toggle {
